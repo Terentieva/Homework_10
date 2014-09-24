@@ -1,0 +1,8 @@
+$ cat .gitignore
+#ignore ext file
+HomeWork10.iml
+#
+#ignore config files from idea
+.idea/
+out/
+target/

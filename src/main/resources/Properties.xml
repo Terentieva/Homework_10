@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<listOfProperties>
+	<property name = "URL">
+        <value>http://www.ex.ua/</value>
+    </property>
+    <property name = "Login">
+        <value>myrka_t</value>
+    </property>
+    <property name = "Password">
+        <value>Nthtynmtdf1985</value>
+    </property>
+    <property name = "SearchDescription">
+        <value>The Ugly Truth</value>
+    </property>
+    <property name = "Language">
+        <value>english</value>
+    </property>
+</listOfProperties>

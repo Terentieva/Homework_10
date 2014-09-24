@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+<suite name="SystemSuite" verbose="1">
+
+    <test name="workWithExUa" >
+        <packages>
+            <package name="base" />
+        </packages>
+        <classes>
+            <class name="testing.WorkWithExUa" />
+        </classes>
+    </test>
+</suite>
