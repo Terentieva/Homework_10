@@ -1,13 +1,16 @@
 package testing;
 
 import base.BaseTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.SearchPage;
 import utils.GetConfigAndTestData;
+import utils.Logger;
 
 public class WorkWithExUa extends BaseTest {
+
     @Test
     public void testSearch()
     {

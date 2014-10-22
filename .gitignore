@@ -1,8 +1,11 @@
 $ cat .gitignore
 #ignore ext file
 HomeWork10.iml
+HomeWork10.iws
+HomeWork10.ipr
 #
 #ignore config files from idea
 .idea/
 out/
 target/
+screenshots/

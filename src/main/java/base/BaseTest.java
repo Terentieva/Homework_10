@@ -5,13 +5,14 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxProfile;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import utils.GetConfigAndTestData;
+import utils.Logger;
+
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
@@ -23,15 +24,17 @@ public class BaseTest {
         driver = new FirefoxDriver(/*generateFirefoxProfile()*/);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        //GetConfigAndTestData getConfig = new GetConfigAndTestData();
-        //driver.get(getConfig.getConfigUrl());
-        driver.get("http://www.ex.ua/");
+        String linkUrl = "http://www.ex.ua/";
+        Logger.debug("Open home page: " + linkUrl);
+        driver.get(linkUrl);
     }
 
     @AfterClass
     public static void tearDown() throws IOException{
-        //takeScreenshot();
+        //makeScreenshot();
+        Logger.debug("Close webdriver");
         driver.quit();
+
     }
 
     /*protected FirefoxProfile generateFirefoxProfile() throws IOException {
@@ -41,11 +44,7 @@ public class BaseTest {
         prf.addExtension(file);
         prf.setPreference("extensions.firebug.currentVersion", "1.11.2");
         return (prf);
-    }
-
-    public void takeScreenshot() throws IOException{
-        File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(srcFile, new File(".//output//screen.jpg"));
     }*/
+
 
 }
