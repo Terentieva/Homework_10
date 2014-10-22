@@ -3,6 +3,8 @@ $ cat .gitignore
 HomeWork10.iml
 HomeWork10.iws
 HomeWork10.ipr
+test.iml
+main.iml
 #
 #ignore config files from idea
 .idea/
